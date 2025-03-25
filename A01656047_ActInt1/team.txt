@@ -1,0 +1,5 @@
+Ayetza Y Infante Garcia - A01709011
+Fernanda Ríos Juárez- A01656047
+
+Ambas trabajamos en conjunto todo el proyecto, no hubo algo en específico en lo que cada una haya trabjado
+debido a que estuvimos en zoom y codificando en paralelo mediante el Live Share de Visual Studio Code. 
