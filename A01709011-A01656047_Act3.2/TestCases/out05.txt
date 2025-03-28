@@ -1,0 +1,2 @@
+La autonomia minima de la bateria de un vehiculo electrico para viajar de 3 a 45 es: 402
+No existe un camino factible para ir de la ciudad 3 a la ciudad 45 usando un vehiculo con autonomia 120
