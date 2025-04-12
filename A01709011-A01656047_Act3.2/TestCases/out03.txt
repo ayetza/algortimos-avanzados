@@ -1,0 +1,2 @@
+La autonomia minima de la bateria de un vehiculo electrico para viajar de 1 a 6 es: 5
+1 3 6 
