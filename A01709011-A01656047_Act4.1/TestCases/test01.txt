@@ -1,0 +1,6 @@
+5
+Sparko 5 10
+Rocky 2 30
+Prue 1 15
+Nico 10 2
+Nerea 20 5
