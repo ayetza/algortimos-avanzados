@@ -21,6 +21,8 @@ private:
     std::vector<int> currentSol;
     int currentScore;
 
+    std::mt19937 g;
+
     void split(std::string line, std::vector<int> &res);
     int evaluate(const std::vector<int> &currentSol);
     std::vector<int> generateInitialSol();

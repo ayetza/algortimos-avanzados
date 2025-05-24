@@ -8,6 +8,8 @@ Graph::Graph()
     numNodes = 0;
     numEdges = 0;
     currentScore = 0;
+    auto seed = std::chrono::steady_clock::now().time_since_epoch().count();
+    g.seed(seed);
 }
 
 // complejidad O(n)
@@ -73,9 +75,6 @@ std::vector<int> Graph::generateInitialSol()
         solution[i] = i;
     }
 
-    auto seed = std::chrono::steady_clock::now().time_since_epoch().count();
-    std::mt19937 g(seed);
-
     std::shuffle(solution.begin(), solution.end(), g);
 
     return solution;
@@ -86,18 +85,12 @@ std::vector<int> Graph::generateInitialSol()
 int Graph::evaluate(const std::vector<int> &currentSol)
 {
     int score = 0;
-    std::vector<int> pos(numNodes);
-
-    for (int i = 0; i < numNodes; i++)
-    {
-        pos[currentSol[i]] = i; // posición en la permutación
-    }
 
     for (int u = 0; u < numNodes; u++)
     {
         for (int v : adjList[u])
         {
-            int contribution = std::max(0, pos[v] - pos[u]);
+            int contribution = std::max(0, currentSol[v] - currentSol[u]);
             score += contribution;
         }
     }
@@ -197,14 +190,13 @@ void Graph::runMultiple(int k, int numRuns)
 
     double stdDev = std::sqrt(sumSquaredDiff / numRuns);
 
-    /*Impresion de estadisticas
+    /*Impresion de estadisticas*/
     std::cout << "Estadisticas de " << numRuns << " ejecuciones:\n";
     std::cout << "Promedio score: " << avgScore << "\n";
     std::cout << "Mejor score: " << maxScore << "\n";
     std::cout << "Peor score: " << minScore << "\n";
     std::cout << "Desviacion estandar: " << stdDev << "\n";
     std::cout << "Tiempo promedio: " << avgTime << " segs\n";
-    */
 
     std::cout << "----------------------------------------------------\n";
     std::cout << bestScore << "\n";
