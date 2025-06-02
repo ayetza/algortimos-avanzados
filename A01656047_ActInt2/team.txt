@@ -1,0 +1,7 @@
+Ayetza Y Infante Garcia - A01709011
+Fernanda Ríos Juárez- A01656047
+
+Fernanda Ríos se encargó de la lectura de los archivos de entrada
+Y ambas trabajamos en conjunto en la implementación de los problemas 1 al 3 del proyecto, 
+más allá de la lectura de los archivos, no hubo algo en específico en lo que cada una haya trabjado
+debido a que estuvimos en zoom y codificando en paralelo mediante el Live Share de Visual Studio Code. 
